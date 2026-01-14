@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CLB Tin học Bắc Duyên Hà</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== RESET NHẸ ===== */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fc;
+        color: #333;
+        scroll-behavior: smooth;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        background: rgba(13, 110, 253, 0.9) !important;
+        backdrop-filter: blur(6px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        margin-left: 10px;
+      }
+
+      .nav-link:hover {
+        color: #ffe066 !important;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        background: linear-gradient(135deg, #0d6efd, #6f42c1);
+        color: white;
+        padding: 140px 0 120px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-weight: 800;
+      }
+
+      .hero p {
+        opacity: 0.95;
+      }
+
+      /* ===== SECTION ===== */
+      section {
+        padding: 90px 0;
+      }
+
+      section h2 {
+        font-weight: 700;
+        position: relative;
+      }
+
+      section h2::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(135deg, #0d6efd, #6f42c1);
+        display: block;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+
+      /* ===== CARD ===== */
+      .card {
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-title {
+        font-weight: 600;
+      }
+
+      /* ===== BLOG CARD ===== */
+      #blog .card {
+        background: #ffffff;
+      }
+
+      /* ===== THÀNH VIÊN ===== */
+      #thanhvien .card {
+        background: linear-gradient(180deg, #ffffff, #f1f3ff);
+      }
+
+      #thanhvien .fw-semibold {
+        font-size: 0.95rem;
+      }
+
+      /* ===== FORM ===== */
+      .form-control,
+      .form-select {
+        border-radius: 12px;
+        padding: 10px 14px;
+        border: 1px solid #ddd;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: #6f42c1;
+        box-shadow: 0 0 0 0.15rem rgba(111, 66, 193, 0.25);
+      }
+
+      /* ===== BUTTON ===== */
+      .btn-primary {
+        background: linear-gradient(135deg, #0d6efd, #6f42c1);
+        border: none;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-weight: 600;
+      }
+
+      .btn-primary:hover {
+        opacity: 0.9;
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: linear-gradient(135deg, #0d6efd, #6f42c1);
+        color: white;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+      section {
+        scroll-margin-top: 90px;
+      }
+    </style>
+    <!-- FAVICON -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img
+            src="logo.png"
+            alt="Logo CLB Tin học Bắc Duyên Hà"
+            width="36"
+            height="36"
+            class="rounded-circle"
+          />
+          <span>CLB Tin học Bắc Duyên Hà</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#gioithieu">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#hoatdong">Hoạt động</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#thanhvien">Thành viên</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#thamgia">Tham gia CLB</a>
+            </li>
+            <li class="nav-item ms-2">
+              <a
+                class="btn btn-light btn-sm fw-semibold"
+                href="https://web.facebook.com/profile.php?id=61584117535556"
+                target="_blank"
+              >
+                Liên hệ Fanpage
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="container">
+        <h1 class="fw-bold">Câu lạc bộ Tin học Bắc Duyên Hà</h1>
+        <p class="fs-5 mt-3">
+          Nơi kết nối đam mê công nghệ của học sinh THPT 💻✨
+        </p>
+      </div>
+    </div>
+
+    <!-- GIỚI THIỆU -->
+    <section id="gioithieu">
+      <div class="container">
+        <h2 class="text-primary mb-4">Giới thiệu</h2>
+        <p>
+          Câu lạc bộ Tin học Bắc Duyên Hà là sân chơi dành cho học sinh THPT yêu
+          thích máy tính, công nghệ và sáng tạo. CLB được thành lập với mong
+          muốn tạo ra một môi trường để các bạn học sinh cùng nhau học hỏi, chia
+          sẻ kiến thức và phát triển kỹ năng công nghệ.
+        </p>
+
+        <p>
+          Tham gia CLB, các thành viên không chỉ được học lập trình, thiết kế
+          hay làm website mà còn được rèn luyện tư duy logic, kỹ năng làm việc
+          nhóm và sự tự tin trong học tập cũng như cuộc sống.
+        </p>
+
+        <p class="fst-italic">
+          Tinh thần CLB: Trẻ trung – Đoàn kết – Sáng tạo – Cùng nhau tiến bộ 🚀
+        </p>
+      </div>
+    </section>
+
+    <!-- HOẠT ĐỘNG -->
+    <section id="hoatdong" class="bg-light">
+      <div class="container">
+        <h2 class="text-primary mb-4">Hoạt động</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">💻 Học tập & Thực hành</h5>
+                <p class="card-text">
+                  Học HTML, CSS, lập trình cơ bản, thiết kế đồ họa và làm
+                  website.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">🎨 Sáng tạo nội dung</h5>
+                <p class="card-text">
+                  Thiết kế poster, banner, sản phẩm số phục vụ hoạt động học
+                  sinh.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">🤝 Sinh hoạt & Kết nối</h5>
+                <p class="card-text">
+                  Sinh hoạt CLB định kỳ, chia sẻ kiến thức và hỗ trợ lẫn nhau.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">🏆 Thử sức & Trải nghiệm</h5>
+                <p class="card-text">
+                  Tham gia các cuộc thi, dự án và hoạt động công nghệ dành cho
+                  học sinh.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BLOG -->
+    <section id="blog" class="bg-light">
+      <div class="container">
+        <h2 class="text-primary mb-4">Blog – Chia sẻ kiến thức</h2>
+        <p class="mb-4">
+          Nơi các thành viên CLB chia sẻ kiến thức tin học, kinh nghiệm học tập
+          và những điều thú vị về công nghệ.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">📘 Học HTML cho người mới</h5>
+                <p class="card-text">
+                  Giới thiệu những kiến thức HTML cơ bản dành cho học sinh mới
+                  bắt đầu.
+                </p>
+                <small class="text-muted">Đăng bởi: Thành viên CLB</small>
+
+                <a href="blog.html" class="btn btn-sm btn-primary mt-2">
+                  Xem chi tiết
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">💡 Mẹo học Tin hiệu quả</h5>
+                <p class="card-text">
+                  Chia sẻ cách học tin học dễ hiểu, dễ nhớ và áp dụng tốt vào
+                  bài tập.
+                </p>
+                <small class="text-muted">Đăng bởi: Ban nội dung</small>
+
+                <a href="blog.html" class="btn btn-sm btn-primary mt-2">
+                  Xem chi tiết
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">🚀 Dự án website đầu tiên</h5>
+                <p class="card-text">
+                  Hành trình tạo ra website đầu tiên của học sinh CLB Tin học.
+                </p>
+                <small class="text-muted">Đăng bởi: Thành viên CLB</small>
+
+                <a href="blog.html" class="btn btn-sm btn-primary mt-2">
+                  Xem chi tiết
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- THÀNH VIÊN -->
+    <section id="thanhvien" class="bg-light">
+      <div class="container">
+        <h2 class="text-primary mb-4">Thành viên Câu lạc bộ</h2>
+        <p class="mb-5">
+          Câu lạc bộ Tin học Bắc Duyên Hà được xây dựng và phát triển bởi tập
+          thể học sinh đam mê công nghệ, đoàn kết và sáng tạo.
+        </p>
+
+        <!-- 4 THÀNH VIÊN QUAN TRỌNG -->
+        <h4 class="text-secondary mb-3">Ban điều hành</h4>
+        <div class="row g-4 mb-5">
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">Nguyễn Thị F</h5>
+                <p class="fw-semibold text-primary">Chủ nhiệm CLB</p>
+                <small class="text-muted">Quản lý – Định hướng</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">Trần Thị B</h5>
+                <p class="fw-semibold text-primary">Phó Chủ nhiệm</p>
+                <small class="text-muted">Nội dung – Truyền thông</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">Lê Văn C</h5>
+                <p class="fw-semibold text-primary">Trưởng ban Kỹ thuật</p>
+                <small class="text-muted">Lập trình – Website</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">Phạm Thị D</h5>
+                <p class="fw-semibold text-primary">Trưởng ban Thiết kế</p>
+                <small class="text-muted">Thiết kế – Sáng tạo</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- THÀNH VIÊN CLB -->
+        <h4 class="text-secondary mb-3">Thành viên CLB</h4>
+        <p class="mb-3">
+          Các thành viên còn lại của CLB là những học sinh yêu thích công nghệ,
+          luôn tích cực tham gia hoạt động và hỗ trợ lẫn nhau trong học tập.
+        </p>
+
+        <div class="row g-3">
+          <div class="col-md-2 col-sm-4 col-6">
+            <div class="card text-center">
+              <div class="card-body p-2">
+                <small>Nguyễn Văn E</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-6">
+            <div class="card text-center">
+              <div class="card-body p-2">
+                <small>Trần Văn F</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-6">
+            <div class="card text-center">
+              <div class="card-body p-2">
+                <small>Lê Thị G</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-6">
+            <div class="card text-center">
+              <div class="card-body p-2">
+                <small>Phạm Văn H</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-6">
+            <div class="card text-center">
+              <div class="card-body p-2">
+                <small>Nguyễn Thị I</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-6">
+            <div class="card text-center">
+              <div class="card-body p-2">
+                <small>… và nhiều thành viên khác</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THAM GIA CLB -->
+    <section id="thamgia">
+      <div class="container">
+        <h2 class="text-primary mb-4">Tham gia Câu lạc bộ</h2>
+        <p>
+          Nếu bạn là học sinh yêu thích công nghệ, mong muốn học hỏi và phát
+          triển kỹ năng tin học, hãy đăng ký tham gia Câu lạc bộ Tin học Bắc
+          Duyên Hà.
+        </p>
+
+        <form class="row g-3 mt-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Họ và tên" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Lớp" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Bạn quan tâm mảng nào?</label>
+            <select class="form-select">
+              <option>Lập trình</option>
+              <option>Tạo sản phẩm</option>
+              <option>Chưa biết – muốn học</option>
+            </select>
+          </div>
+          <div class="col-md-12">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email / Facebook liên hệ"
+            />
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Gửi đăng ký</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center">
+      <div class="container">
+        <p class="mb-1 fw-semibold">© 2026 CLB Tin học Bắc Duyên Hà</p>
+        <small>
+          Fanpage:
+          <a
+            href="https://web.facebook.com/profile.php?id=61584117535556"
+            class="text-white"
+            target="_blank"
+          >
+            CLB Tin học Bắc Duyên Hà
+          </a>
+        </small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
